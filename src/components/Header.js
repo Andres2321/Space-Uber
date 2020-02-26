@@ -3,49 +3,34 @@ import { Link } from 'react-router-dom'
 
 
 
-function Header() {
+function Header(props) {
+  console.log(props)
   return (
-    <div className='header'>
-      <nav className='nav_links'>
-        <li>
-          <Link
-          to=''
-          >Home</Link>
-        </li>
-        <li>
-          <Link
-          to='/locations'
-          >Locations</Link>
-        </li>
-        <li>
-          <Link
-          to='/Drivers'
-          >Drivers</Link>
-        </li>
-        <li>
-          <Link
-          to=''
-          >Log In</Link>
-        </li>
-        <li>
-          <Link
-          to=''
-          >Get Started</Link>
-        </li>
-        <li>
-          <Link
-          to=''
-          >Help Center</Link>
-        </li>
-      </nav>
+    <nav className='nav_links'>
+        <img
+          src='https://media.giphy.com/media/i2tLw5ZyikSFdkeGHT/giphy.gif'
+          className='portal'
+        />
 
-      <main>
-      </main>
-    </div>
+      <h1 className='logo'>
+        <Link to='/'>
+          <p>Space Uber</p>
+      </Link>
+      </h1>
 
+      <Link>
+        My Wallet: 0.00 Schmeckles
+      </Link>
+
+      <Link
+        to='/locations'
+      >Locations</Link>
+
+      <Link
+        to='/HelpCenter'
+      >Help Center</Link>
+    </nav>
   )
 }
-
-
 
 export default Header

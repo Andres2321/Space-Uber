@@ -1,12 +1,107 @@
-/*            Drivers                */
+h1{
+  margin: 0;
+  padding: 0;
+}
 
+
+/*               Header                     */
+a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 2.5em;
+}
+
+
+.nav_links{
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
+  justify-content: flex-end;
+  align-items: center;
+  height: 130px;
+  background-color: rgb(0, 0, 0);
+  /* background-image: url(https://i.gifer.com/K5c.gif); */
+}
+
+.portal{
+  width: 7%;
+  height: 90%;
+}
+.logo{
+  margin-right: auto;
+}
+/*               Header                     */
+
+
+
+
+
+
+
+/*               Home Page                     */
+.grid-container{
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px 250px 250px 250px 250px;
+  grid-template-rows: 76px 76px 76px 76px 76px 76px;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  justify-content: center;
+  align-content: center;
+}
+
+.title-tile{
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-content: baseline;
+  text-align: center;
+  align-self: end;
+}
+
+.title-tile2{
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  text-align: center;
+  align-self: end;
+}
+
+.image-tile{
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  place-self: center stretch;
+}
+
+.image-tile2{
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  place-self: center stretch;
+}
+/*               Home Page                     */
+
+
+/*                  Footer                */
+.help-center-container{
+  height: 100vh;
+  width: 100vw;
+}
+/*                  Footer                */
+
+
+/*               Drivers                  */
 .driver-list{
   border-radius: 100%;
-  border: 5px black solid;
+  border: 3px black solid;
   width: 10%;
   height: auto;
   margin: 2em;
 }
+/*               Drivers                  */
 
 
 
@@ -15,7 +110,409 @@
 
 
 
+/*               PlanetList               */
+.locations-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.row {
+  height: 30vh;
+  flex-direction: row;
+  margin: 1em;
+  align-items: center;
+}
+
+.row img {
+  height:100%;
+  width: 100%;
+}
+
+.row .location-text {
+  flex:4;
+}
+
+.row .planet-image-container {
+  flex:1;
+}
+
+.location-text{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 2em;
+  align-items: center;
+}
+
+.planet-button{
+  height: 50px;
+  width: 250px;
+}
+/*              PlanetList                */
 
 
-/*            Drivers                */
+
+
+
+
+/*            LocationDetails             */
+.location-details-image{
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+}
+/*            LocationDetails             */
+
+
+
+
+
+
+
+/*                  Footer                */
+.footer{
+  background-color: rgb(0, 0, 0);
+  height: 20vh;
+}
+/*                  Footer                */
+
+
+
+/*                  Help Center                */
+.grid-container-help-center{
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  grid-template-rows: 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px 200px;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.help-center-link{
+  width: 100%;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 10;
+  grid-row-end: 12;
+  justify-content: center;
+  align-items: center;
+}
+.help-center-image{
+  justify-content: center;
+}
+
+.help-center-image1{
+  width: 60%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.help-center-title1{
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  place-self: end;
+  font-size: 2em;
+}
+
+.help-center-par1{
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin: 0;
+  place-self: start;
+}
+
+.help-center-image2{
+  width: 90%;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.help-center-title2{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  place-self: end;
+  font-size: 2em;
+}
+
+.help-center-par2{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  place-self: start;
+}
+
+.help-center-image3{
+  width: 38%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+.help-center-title3{
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  place-self: end;
+  font-size: 2em;
+}
+
+.help-center-par3{
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  place-self: start;
+}
+
+.help-center-image4{
+  width: 35%;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 9;
+}
+
+.help-center-title4{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  place-self: end;
+  justify-self: left;
+  font-size: 2em;
+}
+
+.help-center-par4{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 8;
+  grid-row-end: 9;
+  place-self: start;
+}
+
+.help-center-title5{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  place-self: center;
+  justify-self: center;
+}
+
+/*                  Help Center                */
+
+
+
+/*                  Form Page                */
+.form-grid-container{
+  display: grid;
+  grid-template-columns: 350px 350px 350px 350px;
+  grid-template-rows: 200px 200px 200px 200px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+}
+
+.form-title{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-size: 4em;
+  place-self: center;
+}
+
+.form-picture{
+  width: 100%;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  justify-self: end;
+}
+
+.form-picture2{
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  justify-self: start;
+}
+
+.form-container{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+
+.first-name{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-self: start;
+  justify-self: center;
+  font-size: 2em;
+}
+
+.last-name{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-self: start;
+  justify-self: center;
+  font-size: 2em;
+}
+
+.email{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  align-self: center;
+  justify-self: center;
+  font-size: 2em;
+}
+
+input{
+  border: none;
+  border-bottom: 2px solid black; 
+  width: 100%;
+  height: 40px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.37);
+  text-align: center;
+}
+
+*:focus {
+    outline: none;
+}
+
+input[type="text"] {
+  font-family: monospace;
+  font-size: 30px;
+}
+
+input[type="email"] {
+  font-family: monospace;
+  font-size: 30px;
+}
+
+.text-area{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  align-self: start;
+  justify-self: center;
+  opacity: .7;
+}
+textarea{
+  font-size: 20px;
+}
+
+.form-submit{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  align-self: center;
+  justify-self: center;
+}
+
+.form-button{
+  width: 100px;
+  height: 50px;
+}
+/*                  Form Page                */
+
+
+
+
+
+/*                  form Submit                */
+.form-submit-container{
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  grid-template-rows: 100px 100px 100px 100px 100px;
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+  justify-content: center;
+  align-content: center;
+}
+
+.form-title{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-size: 3em;
+}
+
+.form-title2{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  place-self: stretch;
+  justify-self: center;
+
+}
+
+.form-image{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  width: 72.9%;
+  align-self: start;
+  justify-self: center;
+  padding-left: 100px;
+}
+/*                  form Submit                */
+
+
+
+  /* grid-column-start: ;
+  grid-column-end: ;
+  grid-row-start: ;
+  grid-row-end: ; */
+
+
+
 

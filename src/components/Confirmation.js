@@ -9,7 +9,12 @@ class Confirmation extends React.Component {
   render() {
     return (
       <div>
-        Confirmation Page
+        <h1>THANK YOU FOR YOUR PURCHASE</h1>
+        <h3>Your driver has been notified and is on the way</h3>
+        <p>Location: </p>
+        <p>Driver: </p>
+        <p>Estimated Schmeckle: </p>
+        <p></p>
     </div>
     )
   }
