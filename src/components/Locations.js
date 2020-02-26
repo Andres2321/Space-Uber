@@ -1,6 +1,7 @@
 import React from 'react'
+import planetsData from '../constants/planetsData'
 import { Link } from 'react-router-dom'
-
+import Footer from './Footer'
 class Locations extends React.Component {
   constructor(props) {
     super(props)
@@ -9,25 +10,30 @@ class Locations extends React.Component {
 
   render() {
     const { locations } = this.props
-    console.log(locations)
-    const location = locations.map((location) => {
+    const location = locations.map((location, index) => {
       return (
-        <div key={location.id}>
-          <Link to={`/locations/locationdetails/${location.id}`}>
+        <div className='flex row locations-container' key={index}>
+          <div className='planet-image-container'>
+            <img src={planetsData[index].url} alt={location.name} />
+          </div>
+
+          <div key={location.id} className='location-text'>
             <h1>{location.name}</h1>
-          </Link>
+            <Link to={`/locations/locationdetails/${location.id}`}>
+              <button className='planet-button'>Select</button>
+            </Link>
+          </div>
         </div>
       )
     })
+
     return (
-      <>
-        <form>
-          <input type='text' placeholder='' />
-        </form>
-        <div>
+      <div className='locations-container'>
+        <div className='wrapper'>
           {location}
+          <Footer />
         </div>
-      </>
+      </div>
     )
   }
 }
