@@ -14,40 +14,39 @@ function LocationDetails(props) {
 
   const driver = drivers.map((driver) => {
     return (
-      <div key={driver.id}>
-        <Link to={`/locations/${parseInt(location.id)}/drivers/DriversDetailPerLocation/${driver.id}`}>
-          <img src={driver.image} className='driver-list' alt='driver' />
-        </Link>
-        <h2>{driver.name}</h2>
+      <div key={driver.id} className='driver-image'>
+        <>
+          <h2 className='location-details-title'>{driver.name}</h2>
+          <Link to={`/locations/${parseInt(location.id)}/drivers/DriversDetailPerLocation/${driver.id}`} className='center'>
+            <img src={driver.image} className='drivers-detail-image' alt='driver' />
+          </Link>
+        </>
       </div>
     )
   })
 
   return (
+    <>
     <div>
       {location !== undefined ?
         (
           <>
-            <img src={location.url} alt={location.name} className='location-details-image' />
             <h1>{location.name}</h1>
+            <img src={location.url} alt={location.name} className='location-details-image' />
           </>
         )
-        :
-        (<h1>Not a location</h1>)
+        :(<h1>Not a location</h1>)
       }
-      <h1>
-        Location Detail
-      </h1>
-      <div>
-        <h2>Choose your driver:</h2>
-        {driver}
       </div>
-      <Footer />
+      <div>
+        <h2>Drivers near you: </h2>
+        <div className='locations-detail-image-container'>
+          {driver}
+        </div>
     </div>
+    <Footer />
+    </>
   )
 }
-
-
-
 
 export default LocationDetails

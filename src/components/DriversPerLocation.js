@@ -12,44 +12,32 @@ function DriversPerLocation(props) {
       parseInt(driver_id) === driver.id
     )
   })
+
   const character = driver.map((driver) => {
     return (
       <div key={driver.id}>
-        <h1>{driver.name}</h1>
-        <img src={driver.image} className='driver-list' alt='profile' />
-        <p>{driver.species}</p>
-        <p>Rating: </p>
-        <p>Driver Description: </p>
+        <h1 className='chosen-drivers'>{driver.name}</h1>
+        <img src={driver.image} alt='profile' className='chosen-driver-image'/>
       </div>
     )
   })
 
-  // const goBack = () => {
-  //   props.history.push(`/locations/locationdetails/${props.match.params.locationId}`)
-  // }
-
-  // const location = planetsData.find((location) => {
-  //   return (
-  //     parseInt(location_id) === location.id
-  //   )
-  // })
-
-  console.log(driver)
   return (
-    <div>
+    <>
+    <div className='driver-detail-per-location-container'>
       {character}
-      <Link to={`/locations/locationdetails/${props.match.params.locationId}`}>
+      <Link to={`/locations/locationdetails/${props.match.params.locationId}`} className='back-to-driver-button'>
         <button>
           Back to drivers
       </button>
       </Link>
-
-      <button onClick={() => props.receipt(driver[0].id, props.match.params.locationId)} >
-          Select driver
+        <button onClick={() => props.receipt(driver[0].id, props.match.params.locationId)} className='choose-driver-button'>
+        Select driver
       </button>
-
-      <Footer />
     </div>
+    
+      <Footer />
+    </>
   )
 }
 
