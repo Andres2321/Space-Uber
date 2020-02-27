@@ -1,34 +1,34 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-
-
 function Header(props) {
-  console.log(props)
+
   return (
     <nav className='nav_links'>
-        <img
-          src='https://media.giphy.com/media/i2tLw5ZyikSFdkeGHT/giphy.gif'
-          className='portal'
-        />
+      <img
+        src='https://media.giphy.com/media/i2tLw5ZyikSFdkeGHT/giphy.gif'
+        className='portal'
+        alt='portal'
+      />
 
       <h1 className='logo'>
         <Link to='/'>
-          <p>Space Uber</p>
-      </Link>
+          <p>Interplanetary Travel</p>
+        </Link>
       </h1>
 
-      <Link>
-        My Wallet: 0.00 Schmeckles
+      <Link to='/wallet'>
+        <p>Wallet: {props.schmeckles} Schmeckles</p>
+      </Link>
+
+      <Link to='/BecomeADriver'>
+    <p>Become a Driver</p>
       </Link>
 
       <Link
-        to='/locations'
-      >Locations</Link>
-
-      <Link
-        to='/HelpCenter'
-      >Help Center</Link>
+        to='/HelpCenter'>
+        <p>Help Center</p>
+        </Link>
     </nav>
   )
 }

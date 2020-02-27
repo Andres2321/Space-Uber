@@ -11,6 +11,8 @@ import Confirmation from './components/Confirmation'
 import Payments from './components/Payment'
 import Form from './components/Form'
 import FormSubmit from './components/FormSubmit'
+import Wallet from './components/Wallet'
+import BecomeADriver from './components/BecomeADriver'
 
 const LOCATION_URL = 'http://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/location/[1,9,10,15,27,28,29,35,37,40,43,47,48,55,57,75]'
 const CHARACTER_URL = 'http://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/[1,2,3,4,5,7,8,9,10,12,13,14,15,16,17,18,20,21,22,23,25,26,28,29,30,31,32,33,34,35,36,40,41,43,44,45,46,47,48,49,50,51,52,54,55,56,57,58,60]'
@@ -24,9 +26,8 @@ class Container extends React.Component {
       driverId: undefined,
       locationId: undefined,
       randomDrivers: [],
-      schmeckles: '1,000,000.00'
+      schmeckles: '1,000,000'
     }
-
     this.fetchData = this.fetchData.bind(this)
     this.fetchCharacterData = this.fetchCharacterData.bind(this)
   }
@@ -81,11 +82,18 @@ class Container extends React.Component {
   }
 
   render() {
-    const { locations, characters, schmeckles } = this.state
+    const { locations, characters, schmeckles, randomDrivers, driverId, locationId } = this.state
     return (
       <>
-        <Header />
+        <Header
+          schmeckles={schmeckles} />
         <>
+
+          <Route
+            path='/wallet'
+              component={Wallet}
+            />
+
           <Route
             exact
             path='/'
@@ -95,15 +103,13 @@ class Container extends React.Component {
           />
 
           <Route
-            path='/header'
-            render={() => <Header
-              schmeckles={schmeckles}
-            />}
+            path='/helpCenter'
+            component={HelpCenter}
           />
 
           <Route
-            path='/helpCenter'
-            component={HelpCenter}
+            path='/BecomeADriver'
+            component={BecomeADriver}
           />
 
           <Route
@@ -135,14 +141,14 @@ class Container extends React.Component {
           <Route
             exact path='/locations/locationdetails/:location_id'
             render={(routerProps) => <LocationDetails
-              drivers={this.state.randomDrivers}
+              drivers={randomDrivers}
               {...routerProps} />}
           />
 
           <Route
             path='/locations/:locationId/drivers/DriversDetailPerLocation/:driver_id'
             render={(routerProps) => <DriversPerLocation
-              drivers={this.state.randomDrivers}
+              drivers={randomDrivers}
               receipt={this.receipt}
               {...routerProps}
             />} />
@@ -150,9 +156,12 @@ class Container extends React.Component {
           <Route
             path='/confirmation'
             render={(routerProps) => <Confirmation
-              drivers={this.state.randomDrivers}
+              drivers={randomDrivers}
+              driver={driverId}
+              locations={locations}
+              location={locationId}
               {...routerProps}
-            />} />
+            /> } />
         </>
       </>
     )
