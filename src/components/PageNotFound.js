@@ -11,31 +11,31 @@ class PageNotFound extends React.Component {
     }
   }
   componentDidMount() {
-  // this.soundPlay()
+    this.soundPlay()
   }
-  
-  // soundPlay = () => {
-  //   const sound = new Howl({
-  //     src: sun,
-  //     volume: 1
-  //   })
-  //   sound.play()
-  // }
 
-  
+  soundPlay = () => {
+    const sound = new Howl({
+      src: sun,
+      volume: 1
+    })
+    sound.play()
+  }
+
   render() {
     return (
       <div className='page-not-found-container'>
         <h1 className='pagenotfound-title'>404 Error</h1>
         <h1 className='pagenotfound-title'>
-          Look what you did! Stop breaking things
+          Look what you did. Stop breaking things!
       </h1>
-        <img src='https://i.imgur.com/ydJ9x8J.png?1' alt='dancing' className='sun-image' />
+        <div className='animation'>
+          <img src='https://i.imgur.com/ydJ9x8J.png?1' alt='screaming' className='sun-image' />
+        </div>
         <Footer />
       </div>
     )
   }
-
 }
 
 export default PageNotFound

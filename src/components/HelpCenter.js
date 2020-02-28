@@ -1,7 +1,6 @@
 import React from 'react'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
-// import '../css/HelpCenter'
 
 function HelpCenter() {
   return (
@@ -35,6 +34,5 @@ function HelpCenter() {
     </>
   )
 }
-
 
 export default HelpCenter

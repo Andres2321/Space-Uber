@@ -2,7 +2,6 @@ import React from 'react'
 import planetsData from '../constants/planetsData'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
-// import '../css/Locations'
 
 class Locations extends React.Component {
   constructor(props) {
@@ -18,7 +17,6 @@ class Locations extends React.Component {
           <div className='planet-image-container'>
             <img src={planetsData[index].url} alt={location.name} className='locations-image' />
           </div>
-
           <div key={location.id} className='location-text'>
             <h1 className='locations-name'>{location.name}</h1>
             <Link to={`/locations/locationdetails/${location.id}`} className='location-link'>
@@ -32,9 +30,7 @@ class Locations extends React.Component {
     return (
       <>
         <div className='main-locations-container'>
-          {/* <div className='wrapper'> */}
             {location}
-          {/* </div> */}
         </div>
         <Footer />
       </>

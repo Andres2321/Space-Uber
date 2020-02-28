@@ -11,13 +11,9 @@ import Confirmation from './components/Confirmation'
 import Payments from './components/Payment'
 import Form from './components/Form'
 import FormSubmit from './components/FormSubmit'
-import Wallet from './components/Wallet'
 import BecomeADriver from './components/BecomeADriver'
 import Images from './Images/Images'
 import PageNotFound from './components/PageNotFound'
-
-
-
 
 const LOCATION_URL = 'http://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/location/[1,9,10,15,27,28,29,35,37,40,43,47,48,55,57,75]'
 const CHARACTER_URL = 'http://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/[1,2,3,4,5,7,8,9,10,12,13,14,15,16,17,18,20,21,22,23,25,26,28,29,30,31,32,33,34,35,36,40,41,43,44,45,46,47,48,49,50,51,52,54,55,56,57,58,60]'
@@ -34,7 +30,8 @@ class Container extends React.Component {
       locationId: undefined,
       randomDrivers: [],
       schmeckles: 1000000,
-      ratings: Images
+      ratings: Images,
+      isLoading: true
     }
 
     this.fetchData = this.fetchData.bind(this)
@@ -62,7 +59,9 @@ class Container extends React.Component {
     try {
       const response = await axios.get(CHARACTER_URL)
       this.setState({
-        characters: [...response.data]
+        characters: [...response.data],
+        isLoading: false
+
       }
       )
     } catch (err) {
@@ -71,7 +70,6 @@ class Container extends React.Component {
   }
 
   receipt = (driverId, locationId, ratings) => {
-    console.log(driverId, locationId)
     this.setState({
       driverId,
       locationId,
@@ -98,9 +96,8 @@ class Container extends React.Component {
     })
   }
 
-
   render() {
-    const { locations, characters, schmeckles, randomDrivers, driverId, locationId, ratings } = this.state
+    const { locations, characters, schmeckles, randomDrivers, driverId, locationId, ratings, isLoading } = this.state
     return (
       <>
         <Header
@@ -114,11 +111,6 @@ class Container extends React.Component {
                 drivers={characters}
               />}
             />
-
-            {/* <Route
-              path='/wallet'
-              render={() => <Wallet schmeckles={schmeckles} />}
-            /> */}
 
             <Route
               path='/helpCenter'
@@ -144,8 +136,10 @@ class Container extends React.Component {
             <Route
               exact
               path='/locations'
-              render={() => <Locations locations={locations} />}
-            />
+              render={() => <Locations
+                locations={locations}
+                isLoading={isLoading}
+              /> } />
 
             <Route
               exact
@@ -163,6 +157,7 @@ class Container extends React.Component {
               render={(routerProps) => <LocationDetails
                 drivers={randomDrivers}
                 ratings={ratings}
+                isLoading={isLoading}
                 {...routerProps} />}
             />
 

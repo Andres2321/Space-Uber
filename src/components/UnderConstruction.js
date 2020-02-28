@@ -1,5 +1,4 @@
 import React from 'react'
-// import '../css/UnderConstruction'
 
 function UnderConstruction() {
   return (
@@ -9,7 +8,5 @@ function UnderConstruction() {
     </div>
   )
 }
-
-
 
 export default UnderConstruction

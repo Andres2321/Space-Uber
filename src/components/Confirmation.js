@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
-// import '../css/Confirmation'
+
 
 function Confirmation(props) {
 
@@ -11,17 +11,10 @@ function Confirmation(props) {
     )
   })
 
-  const location = props.locations.find((place) => {
-    return (
-      parseInt(place.id) === parseInt(props.locationId)
-    )
-  })
-
   return (
     <>
-      {console.log(location)}
       <div className='confirmation-container'>
-        <h1 className='confirmation-title'>THANK YOU FOR YOUR PURCHASE</h1>
+        <h1 className='confirmation-title'>THANK YOU FOR YOUR PURCHASE!</h1>
         {drivers !== undefined &&
           <>
             <h3 className='confirmation-driver-name'>{drivers.name} has been notified and is on the way</h3>

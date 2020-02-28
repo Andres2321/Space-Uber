@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
-// import '../css/Home'
 
 function Home() {
   return (
@@ -21,7 +20,7 @@ function Home() {
         <img src='https://i.imgur.com/smIlUUg.png?1' className='home-img2' alt='teleport gun' />
         <h1 className='home-title3'>Become a Driver</h1>
         <p className='home-par3'>Get certified to become a driver. Anyone is welcome to join our professional driving team.
-        Click on 'Become A Driver' above and get started. What are you waiting for? GO!</p>
+        What are you waiting for? GO!</p>
         <img src='https://i.imgur.com/1YmnyFC.png?1' className='home-img3' alt='spaceship' />
         <h1 className='home-title4'>Got More Question?</h1>
         <p className='home-par4'>I don't know pal, it is pretty self explanatory. What else can I say? If you want more sweet sweet content,
@@ -32,6 +31,5 @@ function Home() {
     </>
   )
 }
-
 
 export default Home

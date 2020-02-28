@@ -2,11 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
 import planetsData from '../constants/planetsData'
-// import '../css/LocationDetails'
 
 function LocationDetails(props) {
-  const { match: { params: { location_id } }, drivers, ratings } = props
-
+  const { match: { params: { location_id } }, drivers, ratings, isLoading } = props
   const location = planetsData.find((location) => {
     return (
       parseInt(location_id) === location.id
@@ -30,27 +28,27 @@ function LocationDetails(props) {
         </div>
       )
     }
-
   })
 
+  console.log(props.isLoading)
   return (
     <>
       <div className='location-details-container'>
         <div className='location-details-location-image-container'>
-          {location !== undefined ?
+          {isLoading == false ?
             (
               <>
                 <h1 className='location-details-location-title'>You Have Chosen To Travel To: {location.name}</h1>
                 <div className='locations-detail-location-container'>
-                <img src={location.url} alt={location.name} className='location-details-image ' />
+                  <img src={location.url} alt={location.name} className='location-details-image ' />
                 </div>
               </>
             )
-            : (<h1>Not a location</h1>)
+            : (<h1>Wait! Things are loading</h1>)
           }
         </div>
         <div>
-          <h2>These are the drivers near you: </h2>
+          <h2 className='drivers-near-you'>These are the drivers near you: </h2>
           <div className='locations-detail-image-container'>
             {driver}
           </div>

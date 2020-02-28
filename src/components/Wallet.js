@@ -1,5 +1,4 @@
 import React from 'react'
-// import '../css/Wallet' 
 
 function Wallet(props) {
   return (
@@ -15,6 +14,5 @@ function Wallet(props) {
     </div>
   )
 }
-
 
 export default Wallet

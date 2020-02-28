@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Footer from './Footer'
 import { Howl } from 'howler'
 import ThankYou from '../audio/thank_you.mp3'
-// import '../css/Payment'
 
 class Payment extends React.Component {
   constructor(props) {
@@ -31,7 +30,7 @@ class Payment extends React.Component {
   soundPlay = () => {
     const sound = new Howl({
       src: ThankYou,
-      volume: 1
+      volume: 3
     })
     sound.play()
   }
@@ -45,13 +44,8 @@ class Payment extends React.Component {
     this.props.newBalance(endingBalance)
   }
 
-
   render() {
-    // console.log(this.state.price)
-    console.log(this.state.tip)
-    // console.log(this.props)
-    const { beginningBalance, price, tips, endingBalance } = this.state
-
+    const { price, tips, endingBalance } = this.state
     return (
       <>
         <div className='payment-container'>
@@ -83,7 +77,5 @@ class Payment extends React.Component {
     )
   }
 }
-
-// onClick = {()=> { props.deduce(price) }}
 
 export default Payment

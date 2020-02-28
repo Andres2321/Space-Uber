@@ -1,8 +1,6 @@
 import React from 'react'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
-// import '../css/DriversPerLocation'
-
 
 function DriversPerLocation(props) {
 
@@ -23,7 +21,6 @@ function DriversPerLocation(props) {
     )
   })
 
-  console.log(props)
   return (
     <>
       <div className='driver-detail-per-location-container'>

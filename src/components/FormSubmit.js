@@ -1,6 +1,5 @@
 import React from 'react'
 import Footer from './Footer'
-// import '../css/FormSubmit'
 
 function FormSubmit() {
   return (
@@ -14,6 +13,5 @@ function FormSubmit() {
     </>
   )
 }
-
 
 export default FormSubmit 
