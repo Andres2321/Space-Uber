@@ -42,16 +42,21 @@ function LocationDetails(props) {
                 <div className='locations-detail-location-container'>
                   <img src={location.url} alt={location.name} className='location-details-image ' />
                 </div>
+                <h2 className='drivers-near-you'>These are the drivers near you</h2>
+                <div>
+                  <div className='locations-detail-image-container'>
+                    {driver}
+                  </div>
+                </div>
               </>
             )
-            : (<h1>Wait! Things are loading</h1>)
+            : (
+              <div>
+                <h1>Wait! Things are loading</h1>
+                <img src='https://media.giphy.com/media/SvGFA2WF9IP0WjmzvE/giphy.gif' className='loading-gif'/>
+              </div>
+            )
           }
-        </div>
-        <div>
-          <h2 className='drivers-near-you'>These are the drivers near you: </h2>
-          <div className='locations-detail-image-container'>
-            {driver}
-          </div>
         </div>
       </div>
       <Footer />
