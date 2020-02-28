@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
+import '../css/DriversPerLocation'
 
 
 function DriversPerLocation(props) {
@@ -15,27 +16,27 @@ function DriversPerLocation(props) {
 
   const character = driver.map((driver) => {
     return (
-      <div key={driver.id}>
-        <h1 className='chosen-drivers'>{driver.name}</h1>
-        <img src={driver.image} alt='profile' className='chosen-driver-image'/>
+      <div key={driver.id} className='driver-container one-edge-shadow'>
+        <h1 className='chosen-drivers-title'>You want {driver.name} as a driver?</h1>
+        <img src={driver.image} alt='profile' className='chosen-driver-image' />
       </div>
     )
   })
 
+  console.log(props)
   return (
     <>
-    <div className='driver-detail-per-location-container'>
-      {character}
-      <Link to={`/locations/locationdetails/${props.match.params.locationId}`} className='back-to-driver-button'>
-        <button>
-          Back to drivers
-      </button>
-      </Link>
+      <div className='driver-detail-per-location-container'>
+        <Link to={`/locations/locationdetails/${props.match.params.locationId}`} className='back-to-driver-button'>
+          <button className='back-to-drivers-button'>
+            Back to drivers
+          </button>
+        </Link>
         <button onClick={() => props.receipt(driver[0].id, props.match.params.locationId)} className='choose-driver-button'>
-        Select driver
-      </button>
-    </div>
-    
+          Select driver
+        </button>
+      </div>
+      {character}
       <Footer />
     </>
   )

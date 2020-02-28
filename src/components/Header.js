@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../css/Header'
 
 function Header(props) {
 
@@ -13,7 +14,7 @@ function Header(props) {
 
       <h1 className='logo'>
         <Link to='/'>
-          <p>Interplanetary Travel</p>
+          <h5>Go Schwifty</h5>
         </Link>
       </h1>
 

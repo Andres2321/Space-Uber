@@ -2,11 +2,11 @@ import React from 'react'
 import { Howl } from 'howler'
 import { Link } from 'react-router-dom'
 import Meeseeks from '../audio/Meeseeks.mp3'
+import Footer from './Footer'
+import '../css/Form'
 
 class Form extends React.Component {
-  constructor() {
-    super()
-  }
+  
   soundPlay = () => {
     const sound = new Howl({
       src: Meeseeks,
@@ -54,6 +54,7 @@ class Form extends React.Component {
             </Link>
           </div>
         </div >
+        <Footer />
       </>
     )
   }

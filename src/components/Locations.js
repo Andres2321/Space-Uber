@@ -2,6 +2,8 @@ import React from 'react'
 import planetsData from '../constants/planetsData'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
+import '../css/Locations'
+
 class Locations extends React.Component {
   constructor(props) {
     super(props)
@@ -12,14 +14,14 @@ class Locations extends React.Component {
     const { locations } = this.props
     const location = locations.map((location, index) => {
       return (
-        <div className='flex row locations-container' key={index}>
+        <div className='flex row locations-container one-edge-shadow' key={index}>
           <div className='planet-image-container'>
-            <img src={planetsData[index].url} alt={location.name} />
+            <img src={planetsData[index].url} alt={location.name} className='locations-image' />
           </div>
 
           <div key={location.id} className='location-text'>
-            <h1>{location.name}</h1>
-            <Link to={`/locations/locationdetails/${location.id}`}>
+            <h1 className='locations-name'>{location.name}</h1>
+            <Link to={`/locations/locationdetails/${location.id}`} className='location-link'>
               <button className='planet-button'>Select</button>
             </Link>
           </div>
@@ -28,12 +30,14 @@ class Locations extends React.Component {
     })
 
     return (
-      <div className='locations-container'>
-        <div className='wrapper'>
-          {location}
-          <Footer />
+      <>
+        <div className='main-locations-container'>
+          {/* <div className='wrapper'> */}
+            {location}
+          {/* </div> */}
         </div>
-      </div>
+        <Footer />
+      </>
     )
   }
 }
