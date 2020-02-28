@@ -6,7 +6,6 @@ class Drivers extends React.Component {
     this.state = {}
   }
 
-  
   render() {
     const { drivers } = this.props
     const driver = drivers.map((driver) => {

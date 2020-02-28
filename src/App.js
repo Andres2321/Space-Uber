@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
 import Container from './Container'
+import ResetScroll from './components/ResetScroll';
 
 function App() {
   return (
     <>
-      <Container />
+      <ResetScroll>
+        <Container />
+      </ResetScroll>
     </>
   )
 }

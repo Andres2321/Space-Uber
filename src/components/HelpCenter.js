@@ -7,16 +7,16 @@ function HelpCenter() {
     <>
       <div className='grid-container-help-center'>
         <img src='https://i.imgur.com/FJSZh9r.png?1' className='help-center-image1' alt='Morty face' />
-        <h1 className='help-center-title1'>All drivers have been verified by us, so you can trust us</h1>
+        <h1 className='help-center-title1'>All drivers have been verified, so you can trust us</h1>
         <p className='help-center-par1'>Before anyone can start driving, they are required to attend a 5 minute training session.
           They will receive their certification and begin transporting strangers.</p>
         <img src='https://i.imgur.com/lSDK3vy.png?1' alt='Rick and Morty' className='help-center-image2'/>
-        <h1 className='help-center-title2'>Our clients are our priority, which is why we have 24/7 customers support</h1>
+        <h1 className='help-center-title2'>Our clients are our priority, which is why we have 24/7 customer support</h1>
         <p className='help-center-par2'>Call our professional team of trained safety agents. They are almost always available sometimes.
         Wait average between 1.5 hrs to 2 hrs</p>
         <img src='https://i.imgur.com/cyEJoNJ.png?1' className='help-center-image3' alt='Morty'/>
-        <h1 className='help-center-title3'>Wounded beyond repair, We have insurance for that!</h1>
-        <p className='help-center-par3'>If anything happens to you during your trip. We can help with that.
+        <h1 className='help-center-title3'>Wounded beyond repair? We have insurance for that</h1>
+        <p className='help-center-par3'>If anything happens to you during your trip, we can help with that.
         Click the Meeseeks box below to put your request through.</p>
         <img src='https://i.imgur.com/sB7xAMa.png?1' className='help-center-image4' alt='Morty hurt'/>
         <h1 className='help-center-title4'>Security? Not a problem</h1>
@@ -34,6 +34,5 @@ function HelpCenter() {
     </>
   )
 }
-
 
 export default HelpCenter

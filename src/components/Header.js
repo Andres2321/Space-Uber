@@ -11,23 +11,18 @@ function Header(props) {
         alt='portal'
       />
 
-      <h1 className='logo'>
-        <Link to='/'>
-          <p>Interplanetary Travel</p>
+      {/* This is linked to 404 on purpose */}
+      <Link to='/' className='logo'>
+          <h5>Go Schwifty</h5>
         </Link>
-      </h1>
 
       <Link to='/wallet'>
-        <p>Wallet: {props.schmeckles} Schmeckles</p>
-      </Link>
-
-      <Link to='/BecomeADriver'>
-    <p>Become a Driver</p>
+        <p className='links-style'>Wallet: {props.schmeckles} Schmeckles</p>
       </Link>
 
       <Link
         to='/HelpCenter'>
-        <p>Help Center</p>
+        <p className='links-style'>Help Center</p>
         </Link>
     </nav>
   )

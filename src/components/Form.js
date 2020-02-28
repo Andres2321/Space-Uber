@@ -2,11 +2,10 @@ import React from 'react'
 import { Howl } from 'howler'
 import { Link } from 'react-router-dom'
 import Meeseeks from '../audio/Meeseeks.mp3'
+import Footer from './Footer'
 
 class Form extends React.Component {
-  constructor() {
-    super()
-  }
+  
   soundPlay = () => {
     const sound = new Howl({
       src: Meeseeks,
@@ -14,6 +13,7 @@ class Form extends React.Component {
     })
     sound.play()
   }
+  
   render() {
     return (
       <>
@@ -45,7 +45,6 @@ class Form extends React.Component {
           <div className='text-area'>
             <textarea type='text' name="notes" placeholder='Notes' rows='6' cols='25' />
           </div>
-
           <div className='form-submit'>
             <Link to='/FormSubmit' onClick={this.soundPlay}>
               <button type="submit" className='form-button'>
@@ -54,6 +53,7 @@ class Form extends React.Component {
             </Link>
           </div>
         </div >
+        <Footer />
       </>
     )
   }
