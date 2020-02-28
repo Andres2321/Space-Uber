@@ -23,7 +23,7 @@ a{
 }
 
 p{
-  padding: 0 2em;
+  margin: 0 2em;
   font-family: 'Lacquer', ;
 }
 
@@ -94,6 +94,8 @@ p{
   grid-row-start: 4;
   grid-row-end: 5;
   place-self: end center;
+  box-shadow: 0 10px 20px -7px rgb(107, 107, 107);
+
 }
 
 .home-button-style{
@@ -430,6 +432,7 @@ width: 120%;
   width: 150px;
   height: 50px;
   margin: 30% auto;
+  box-shadow: 0 10px 20px -7px rgb(107, 107, 107);
 }
 
 .drivers-detail-image{
@@ -489,10 +492,12 @@ width: 120%;
 .back-to-drivers-button, .choose-driver-button{
   width: 200px;
   height: 50px;
+  box-shadow: 0 10px 20px -7px rgb(107, 107, 107);
 }
 
 .choose-driver-button, .back-to-driver-button {
   margin: 5%;
+  box-shadow: 0 10px 20px -7px rgb(107, 107, 107);
 }
 /*            Driver detail per location              */
 
@@ -513,28 +518,52 @@ width: 120%;
 
 .payment-title{
   text-align: center;
-  margin: 5%;
+  margin: 3%;
 }
 
 .payment-image-container{
   width: 50%;
-  margin: 1%;
-  text-align: center;
+  text-align: right;
 }
 
 .payment-calculation-container{
   width: 50%;
-  font-size: 2.5em;
+  font-size: .5em;
+  display: flex;
+  flex-direction: row;
+}
+
+.payment-subcontainer1{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  font-size: 4em;
+  justify-content: center;
+}
+
+.payment-subcontainer2{
+  display: flex;
+  flex-direction: column;
+  font-size: 4em;
+  justify-content: center;
+  padding-top: .9em;
 }
 
 .payment-image{
-  width: 40%;
+  width: 50%;
+  margin-right: 15%;
 }
 
 .payment-button{
-  margin: 2% auto;
+  margin: 0 auto;
 }
 
+.payment-button-style{
+  box-shadow: 0 10px 20px -7px rgb(107, 107, 107);
+  width: 250px;
+  height: 60px;
+  margin: 10%;
+}
 /*            Payment Page             */
 
 
@@ -906,22 +935,17 @@ textarea{
 
 .pagenotfound-title{
   align-self: center;
+  margin: 1% 0;
 }
 
 .sun-image{
   width: 30%;
   align-self: center;
-  margin-top: 3%;
+  margin: 2% 0;
 }
 
 /*                  PageNotFound PageNotFound                */
 
-
-
-  /* grid-column-start: ;
-  grid-column-end: ;
-  grid-row-start: ;
-  grid-row-end: ; */
 
 
 

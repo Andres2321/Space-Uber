@@ -58,17 +58,24 @@ class Payment extends React.Component {
           <h1 className='payment-title'>Payment</h1>
           <div className='inner-confirmation-container'>
             <div className='payment-calculation-container'>
-              <p>Balance: {beginningBalance} schmeckles</p>
-              <p>Cost: {price}</p>
-              <p>Tips: {tips}</p>
-              <p>Ending Balance: {endingBalance}</p>
+              <div className='payment-subcontainer1'>
+                <p>My Wallet</p>
+                <p>Cost:</p>
+                <p>Tips:</p>
+                <p>Ending Balance:</p>
+              </div>
+              <div className='payment-subcontainer2'>
+                <p>{price}</p>
+                <p>{tips}</p>
+                <p>{endingBalance}</p>
+              </div>
             </div>
             <div className='payment-image-container'>
-              <img src='https://i.imgur.com/3Knjnd8.png' alt='Rick drinking' className='payment-image' />
+              <img src='https://i.imgur.com/ydJ9x8J.png?1' alt='Rick drinking' className='payment-image' />
             </div>
           </div>
           <Link to='/confirmation' onClick={this.soundPlay} className='payment-button'>
-            <button >Submit Payment</button>
+            <button className='payment-button-style'>Submit Payment</button>
           </Link>
         </div>
         <Footer />

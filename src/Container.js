@@ -105,8 +105,8 @@ class Container extends React.Component {
       <>
         <Header
           schmeckles={schmeckles} />
-        <Switch>
           <>
+        <Switch>
             <Route
               exact
               path='/'
@@ -115,10 +115,10 @@ class Container extends React.Component {
               />}
             />
 
-            <Route
+            {/* <Route
               path='/wallet'
               render={() => <Wallet schmeckles={schmeckles} />}
-            />
+            /> */}
 
             <Route
               path='/helpCenter'
@@ -187,11 +187,11 @@ class Container extends React.Component {
 
             <Route
               exact
-              path='*'
+              path='/*'
               component={PageNotFound}
             />
-          </>
         </Switch>
+          </>
       </>
     )
   }
