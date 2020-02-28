@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './components/Header'
 import Home from './components/Home'
-import { Route, withRouter } from 'react-router-dom'
+import { Route, withRouter, Switch } from 'react-router-dom'
 import LocationDetails from './components/LocationDetails'
 import DriversPerLocation from './components/DriversPerLocation'
 import Locations from './components/Locations'
@@ -14,6 +14,7 @@ import FormSubmit from './components/FormSubmit'
 import Wallet from './components/Wallet'
 import BecomeADriver from './components/BecomeADriver'
 import Images from './Images/Images'
+import PageNotFound from './components/PageNotFound'
 
 
 
@@ -102,91 +103,95 @@ class Container extends React.Component {
     const { locations, characters, schmeckles, randomDrivers, driverId, locationId, ratings } = this.state
     return (
       <>
-
         <Header
           schmeckles={schmeckles} />
-        <>
+        <Switch>
+          <>
+            <Route
+              exact
+              path='/'
+              render={() => <Home
+                drivers={characters}
+              />}
+            />
 
-          <Route
-            exact
-            path='/'
-            render={() => <Home
-              drivers={characters}
-            />}
-          />
+            <Route
+              path='/wallet'
+              render={() => <Wallet schmeckles={schmeckles} />}
+            />
 
-          <Route
-            path='/wallet'
-            render={() => <Wallet schmeckles={schmeckles}/>}
-          />
+            <Route
+              path='/helpCenter'
+              component={HelpCenter}
+            />
 
-          <Route
-            path='/helpCenter'
-            component={HelpCenter}
-          />
+            <Route
+              path='/BecomeADriver'
+              component={BecomeADriver}
+            />
 
-          <Route
-            path='/BecomeADriver'
-            component={BecomeADriver}
-          />
+            <Route
+              exact
+              path='/form'
+              component={Form}
+            />
 
-          <Route
-            exact
-            path='/form'
-            component={Form}
-          />
+            <Route
+              path='/formSubmit'
+              component={FormSubmit}
+            />
 
-          <Route
-            path='/formSubmit'
-            component={FormSubmit}
-          />
+            <Route
+              exact
+              path='/locations'
+              render={() => <Locations locations={locations} />}
+            />
 
-          <Route
-            exact
-            path='/locations'
-            render={() => <Locations locations={locations} />}
-          />
-
-          <Route
-            exact
-            path='/payment'
-            render={(renderProps) => <Payments
-              locations={locations}
-              schmeckles={schmeckles}
-              newBalance={this.newBalance}
-              {...renderProps}
-            />}
-          />
-
-          <Route
-            exact path='/locations/locationdetails/:location_id'
-            render={(routerProps) => <LocationDetails
-              drivers={randomDrivers}
-              ratings={ratings}
-              {...routerProps} />}
-          />
-
-          <Route
-            path='/locations/:locationId/drivers/DriversDetailPerLocation/:driver_id'
-            render={(routerProps) => <DriversPerLocation
-              drivers={randomDrivers}
-              receipt={this.receipt}
-              {...routerProps}
-            />} />
-
-          <Route
-            path='/confirmation'
-            render={(routerProps) => (
-              <Confirmation
-                drivers={randomDrivers}
-                driver={driverId}
+            <Route
+              exact
+              path='/payment'
+              render={(renderProps) => <Payments
                 locations={locations}
-                locationId={locationId}
-                {...routerProps}
-              />
+                schmeckles={schmeckles}
+                newBalance={this.newBalance}
+                {...renderProps}
+              />}
+            />
 
-            )} />
-        </>
+            <Route
+              exact path='/locations/locationdetails/:location_id'
+              render={(routerProps) => <LocationDetails
+                drivers={randomDrivers}
+                ratings={ratings}
+                {...routerProps} />}
+            />
+
+            <Route
+              path='/locations/:locationId/drivers/DriversDetailPerLocation/:driver_id'
+              render={(routerProps) => <DriversPerLocation
+                drivers={randomDrivers}
+                receipt={this.receipt}
+                {...routerProps}
+              />} />
+
+            <Route
+              path='/confirmation'
+              render={(routerProps) => (
+                <Confirmation
+                  drivers={randomDrivers}
+                  driver={driverId}
+                  locations={locations}
+                  locationId={locationId}
+                  {...routerProps}
+                />)} />
+
+            <Route
+              exact
+              path='*'
+              component={PageNotFound}
+            />
+          </>
+        </Switch>
       </>
     )
   }

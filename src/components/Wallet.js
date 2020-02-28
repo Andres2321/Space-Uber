@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/Wallet'
+// import '../css/Wallet' 
 
 function Wallet(props) {
   return (

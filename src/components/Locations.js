@@ -2,7 +2,7 @@ import React from 'react'
 import planetsData from '../constants/planetsData'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
-import '../css/Locations'
+// import '../css/Locations'
 
 class Locations extends React.Component {
   constructor(props) {

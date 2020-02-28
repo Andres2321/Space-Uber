@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Footer from './Footer'
 import { Howl } from 'howler'
 import ThankYou from '../audio/thank_you.mp3'
-import '../css/Payment'
+// import '../css/Payment'
 
 class Payment extends React.Component {
   constructor(props) {
@@ -37,8 +37,8 @@ class Payment extends React.Component {
   }
 
   updateBalance = () => {
-    const {beginningBalance, price, tips} = this.state
-    let endingBalance=beginningBalance-(price+tips)
+    const { beginningBalance, price, tips } = this.state
+    let endingBalance = beginningBalance - (price + tips)
     this.setState({
       endingBalance
     })
@@ -54,17 +54,20 @@ class Payment extends React.Component {
 
     return (
       <>
-        <div className='confirmation-container'>
-          <h1>Payment</h1>
-          <p>Balance: {beginningBalance} schmeckles</p>
-          <p>Cost: {price}</p>
-          <p>Tips: {tips}</p>
-          <p>Ending Balance: {endingBalance}</p>
-          <div>
+        <div className='payment-container'>
+          <h1 className='payment-title'>Payment</h1>
+          <div className='inner-confirmation-container'>
+            <div className='payment-calculation-container'>
+              <p>Balance: {beginningBalance} schmeckles</p>
+              <p>Cost: {price}</p>
+              <p>Tips: {tips}</p>
+              <p>Ending Balance: {endingBalance}</p>
+            </div>
+            <div className='payment-image-container'>
+              <img src='https://i.imgur.com/3Knjnd8.png' alt='Rick drinking' className='payment-image' />
+            </div>
           </div>
-          <div>
-          </div>
-          <Link to='/confirmation' onClick={this.soundPlay}>
+          <Link to='/confirmation' onClick={this.soundPlay} className='payment-button'>
             <button >Submit Payment</button>
           </Link>
         </div>

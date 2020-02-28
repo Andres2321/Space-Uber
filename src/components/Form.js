@@ -3,7 +3,7 @@ import { Howl } from 'howler'
 import { Link } from 'react-router-dom'
 import Meeseeks from '../audio/Meeseeks.mp3'
 import Footer from './Footer'
-import '../css/Form'
+// import '../css/Form'
 
 class Form extends React.Component {
   
