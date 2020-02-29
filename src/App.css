@@ -994,8 +994,8 @@ textarea{
 }
 
 .sun-image{
-  width: 60%;
-  margin: 9% 20%;
+  width: 30vw;
+  margin: 9% auto;
   z-index: 1
 }
 
