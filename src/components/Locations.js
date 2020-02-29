@@ -9,11 +9,6 @@ class Locations extends React.Component {
     this.state = {}
   }
 
-  componentDidMount() {
-  
-}
-
-
   render() {
     const { locations } = this.props
     const location = locations.map((location, index) => {
@@ -34,8 +29,6 @@ class Locations extends React.Component {
     const { isLoading } = this.props
     return (
       <>
-      {console.log(isLoading)}
-
         {isLoading ?
           (
             <h1>Wait! Things are loading</h1>)
