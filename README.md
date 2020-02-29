@@ -13,4 +13,4 @@ Users are allowed to complete forms if they cannot find their answers in the hel
 ## API Used
 [https://rickandmortyapi.com/]
 
-[https://media.giphy.com/media/cNqQXgpAiOx78Yya9j/giphy.gif]
+![giphy](https://media.giphy.com/media/cNqQXgpAiOx78Yya9j/giphy.gif)
