@@ -34,26 +34,21 @@ function LocationDetails(props) {
     <>
       <div className='location-details-container'>
         <div className='location-details-location-image-container'>
+          <h1 className='location-details-location-title'>You Have Chosen To Travel To: {location.name}</h1>
+          <div className='locations-detail-location-container'>
+            <img src={location.url} alt={location.name} className='location-details-image ' />
+          </div>
+          <h2 className='drivers-near-you'>These are the drivers near you</h2>
           {isLoading == false ?
             (
               <>
-                <h1 className='location-details-location-title'>You Have Chosen To Travel To: {location.name}</h1>
-                <div className='locations-detail-location-container'>
-                  <img src={location.url} alt={location.name} className='location-details-image ' />
-                </div>
-                <h2 className='drivers-near-you'>These are the drivers near you</h2>
-                <div>
                   <div className='locations-detail-image-container'>
                     {driver}
                   </div>
-                </div>
               </>
             )
             : (
-              <div>
                 <h1>Wait! Things are loading</h1>
-                <img src='https://media.giphy.com/media/SvGFA2WF9IP0WjmzvE/giphy.gif' className='loading-gif' />
-              </div>
             )
           }
         </div>

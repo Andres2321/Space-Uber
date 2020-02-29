@@ -9,6 +9,11 @@ class Locations extends React.Component {
     this.state = {}
   }
 
+  componentDidMount() {
+  
+}
+
+
   render() {
     const { locations } = this.props
     const location = locations.map((location, index) => {
@@ -26,16 +31,14 @@ class Locations extends React.Component {
         </div>
       )
     })
-
     const { isLoading } = this.props
     return (
       <>
+      {console.log(isLoading)}
 
         {isLoading ?
-          (<div>
-            <h1>Wait! Things are loading</h1>
-            <img src='https://media.giphy.com/media/SvGFA2WF9IP0WjmzvE/giphy.gif' className='loading-gif' />
-          </div>)
+          (
+            <h1>Wait! Things are loading</h1>)
           :
           (<div className='main-locations-container'>
             {location}
