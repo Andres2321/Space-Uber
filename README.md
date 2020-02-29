@@ -13,5 +13,9 @@ Users are allowed to complete forms if they cannot find their answers in the hel
 ## API Used
 [https://rickandmortyapi.com/]
 
+## Start Traveling
+
 ![giphy](https://media.giphy.com/media/cNqQXgpAiOx78Yya9j/giphy.gif)
+
+## Help Page
 ![giphy](https://media.giphy.com/media/hW3u3qFMcW9sSrx3M1/giphy.gif)
