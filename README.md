@@ -10,4 +10,4 @@ Users are allowed to complete forms if they cannot find their answers in the hel
 
 1. Create a wireframe
 
-! [alt wireframe][https://i.imgur.com/FWTQ5cY.png]
+! [alt wireframe](https://i.imgur.com/FWTQ5cY.png)
