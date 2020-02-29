@@ -30,7 +30,6 @@ function LocationDetails(props) {
     }
   })
 
-  console.log(props.isLoading)
   return (
     <>
       <div className='location-details-container'>
@@ -53,7 +52,7 @@ function LocationDetails(props) {
             : (
               <div>
                 <h1>Wait! Things are loading</h1>
-                <img src='https://media.giphy.com/media/SvGFA2WF9IP0WjmzvE/giphy.gif' className='loading-gif'/>
+                <img src='https://media.giphy.com/media/SvGFA2WF9IP0WjmzvE/giphy.gif' className='loading-gif' />
               </div>
             )
           }
