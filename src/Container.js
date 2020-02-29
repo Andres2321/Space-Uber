@@ -61,7 +61,6 @@ class Container extends React.Component {
       this.setState({
         characters: [...response.data],
         isLoading: false
-
       }
       )
     } catch (err) {
@@ -102,8 +101,8 @@ class Container extends React.Component {
       <>
         <Header
           schmeckles={schmeckles} />
-          <>
-        <Switch>
+        <>
+          <Switch>
             <Route
               exact
               path='/'
@@ -185,8 +184,8 @@ class Container extends React.Component {
               path='/*'
               component={PageNotFound}
             />
-        </Switch>
-          </>
+          </Switch>
+        </>
       </>
     )
   }

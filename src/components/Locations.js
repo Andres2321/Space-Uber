@@ -27,11 +27,20 @@ class Locations extends React.Component {
       )
     })
 
+    const { isLoading } = this.props
     return (
       <>
-        <div className='main-locations-container'>
+
+        {isLoading ?
+          (<div>
+            <h1>Wait! Things are loading</h1>
+            <img src='https://media.giphy.com/media/SvGFA2WF9IP0WjmzvE/giphy.gif' className='loading-gif' />
+          </div>)
+          :
+          (<div className='main-locations-container'>
             {location}
-        </div>
+          </div>)
+          }
         <Footer />
       </>
     )
