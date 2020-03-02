@@ -15,8 +15,8 @@ import BecomeADriver from './components/BecomeADriver'
 import Images from './Images/Images'
 import PageNotFound from './components/PageNotFound'
 
-const LOCATION_URL = 'http://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/location/[1,9,10,15,27,28,29,35,37,40,43,47,48,55,57,75]'
-const CHARACTER_URL = 'http://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/[1,2,3,4,5,7,8,9,10,12,13,14,15,16,17,18,20,21,22,23,25,26,28,29,30,31,32,33,34,35,36,40,41,43,44,45,46,47,48,49,50,51,52,54,55,56,57,58,60]'
+const LOCATION_URL = 'https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/location/[1,9,10,15,27,28,29,35,37,40,43,47,48,55,57,75]'
+const CHARACTER_URL = 'https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/[1,2,3,4,5,7,8,9,10,12,13,14,15,16,17,18,20,21,22,23,25,26,28,29,30,31,32,33,34,35,36,40,41,43,44,45,46,47,48,49,50,51,52,54,55,56,57,58,60]'
 
 // const CORS = http://cors-anywhere.herokuapp.com/
 
