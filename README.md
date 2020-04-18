@@ -9,7 +9,6 @@ Users are allowed to complete forms if they cannot find their answers in the hel
 # Installation Instructions
 ## Front end
 ```
-cd client
 npm i
 ```
 ## Component Heiarchy
